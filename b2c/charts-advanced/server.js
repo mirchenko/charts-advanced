@@ -91,6 +91,11 @@ app.get('/api/v1/client/:clientKey/delta/:stationName/since/:time', function (re
 	});
 });
 
+
+app.get('/' , (req, res) => {
+  res.sendFile(__dirname + '/public/index.html')
+});
+
 app.listen(SERVER_CONFIG.PORT, function () {
 	console.log(`listening on port ${SERVER_CONFIG.PORT}`);
 });
